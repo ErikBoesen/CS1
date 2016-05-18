@@ -1,0 +1,10 @@
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+
+public class Prime extends JFrame implements ActionListener {
+	public static void main(String[] args) {
+		Prime object =  new Prime();
+		object.setVisible(true);
+	}
+}
