@@ -1,6 +1,0 @@
-
-public class Prime extends JFrame implements implements ActionListener {
-	public static void main(String[] args) {
-		
-	}
-}

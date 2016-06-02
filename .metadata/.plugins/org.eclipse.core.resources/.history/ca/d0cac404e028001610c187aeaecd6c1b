@@ -1,0 +1,10 @@
+import javax.swing.JOptionPane;
+
+public class GolfScores {
+	public static void main(String[] args) {
+		String input = JOptionPane.showInputDialog("Enter your string.");
+		String output = "";
+		for (int i = input.length() - 1; i >= 0; i--) output += input.charAt(i);
+		JOptionPane.showMessageDialog(null, input + " backwards is " + output + ".");
+	}
+}

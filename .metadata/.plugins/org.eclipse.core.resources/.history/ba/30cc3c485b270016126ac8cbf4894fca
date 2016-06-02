@@ -1,0 +1,13 @@
+import javax.swing.JOptionPane;
+
+public class StudentArray {
+	public static void main(String[] args) {
+		String[] names = new String[5];
+		String counter = "";
+		for (int i = 0; i <= 4; i++) {
+			names[i] = JOptionPane.showInputDialog("What is the name of student " + (i + 1) + "?");
+			counter += " " + names[i];
+		}
+		JOptionPane.showMessageDialog(null, "The students are " + counter);
+	}
+}
