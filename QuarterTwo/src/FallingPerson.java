@@ -23,9 +23,7 @@ public class FallingPerson extends Applet implements Runnable {
 		Thread th = new Thread(this);
 		th.start();
 	}
-	public void stop() {
-		
-	}
+	public void stop() {}
 	public void paint(Graphics g) {
 		g.drawImage(img, 500, yPos, this);
 	}

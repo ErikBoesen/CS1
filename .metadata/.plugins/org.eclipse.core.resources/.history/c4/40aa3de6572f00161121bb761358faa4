@@ -1,0 +1,28 @@
+import javax.swing.JOptionPane;
+
+public class BubbleSort {
+	public static void main(String[] args) {
+		int[] array = new int[10];
+		String counter = "";
+		for (int i = 0; i < 10; i++) {
+			array[i] = (int)(Math.random() * 1000 + 1);
+			counter += " " + array[i];
+		}
+		JOptionPane.showMessageDialog(null, "The random numbers are " + counter);
+		// Bubble sort
+		for (int i = 10; i > 0; i--) {
+			for (int j = 0; j < i; j++) {
+				// Comparing and Swapping
+				if (array[j] < array[j - 1]) {
+					int temp = array[i - 1];
+					array[j] = array[i] = temp;
+				}
+			}
+		}
+		counter = "";
+		for (int i = 0; i < 10; i++) {
+			counter += " " + array[i];
+		}
+		JOptionPane.showMessageDialog(null, "Sorted numbers are " + counter);
+	}
+}

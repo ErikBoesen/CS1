@@ -4,11 +4,10 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class MovingBall extends Applet implements Runnable, KeyListener {
+public class MovingBall extends Applet implements Runnable {
 	public void init() {
 		setSize(1366,639);
 		setBackground(Color.DARK_GRAY);
-		addKeyListener(this);
 	}
 	public void start() {
 		Thread th = new Thread(this);
@@ -36,14 +35,5 @@ public class MovingBall extends Applet implements Runnable, KeyListener {
 			Thread.sleep(2);
 		}
 		catch(InterruptedException Ex) {}
-	}
-	public void keyTyped(KeyEvent e) {
-		
-	}
-	public void keyPressed(KeyEvent e) {
-		
-	}
-	public void keyReleased(KeyEvent e) {
-		
 	}
 }
