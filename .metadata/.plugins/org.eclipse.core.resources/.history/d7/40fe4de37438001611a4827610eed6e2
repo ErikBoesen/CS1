@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class PersonalityQuiz {
+	public static void main(String[] args) {
+		System.out.println("Welcome to the personality quiz! Please answer all questions honesly, with \"yes\" or \"no\".\n");
+		
+		Scanner kb = new Scanner();
+		System.out.println("Does Hockey suck?");
+		String ans = kb.next();
+		
+		if (ans.equals("yes")) {
+			System.out.println("That's the right answer, good job.\nIs soccer the best sport?");
+			ans = kb.next();
+			
+			if (ans.equals("yes")) {
+				System.out.println("Correct. Do you enjoy spending time at George Mason?");
+			} else if (ans.equals("no")) {
+				System.out.println("");
+			}
+		} else if (ans.equals("no")) {
+			System.out.println("Yes it does.\nWhat is your favorite color?");
+			ans = kb.next();
+			
+			if (ans.equals("yes")) {
+				
+			} else if (ans.equals("no")) {
+				
+			}
+		}
+	}
+}
+
+/*
+ans = kb.next();
+
+if (ans.equals("yes")) {
+	System.out.println("");
+} else if (ans.equals("no")) {
+	System.out.println("");
+}
+*/

@@ -1,0 +1,35 @@
+import javax.swing.JOptionPane;
+
+public class ClassOrganizer {
+	public static void main(String[] args) {
+		String[] names = new String[6];
+		for (int i =  0; i < names.length; i++) {
+			names[i] = JOptionPane.showInputDialog("What is your name?");
+		}
+		int[] nums = new double[6];
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = Integer.parseInt(JOptionPane.showInputDialog("What is " + names[i] + "'s favorite number?"));
+		}
+		for (int i = nums.length; i > 0; i--) {
+			int highest = nums[0];
+			int spot = 0;
+			for (int j = 1; j < i; j++) {
+				if (nums[j] > highest) {
+					highest = nums[j];
+					spot = j;
+				}
+			}
+			int temp = nums[i - 1];
+			nums[i - 1] = highest;
+			nums[spot] = temp;
+			String tempName = names[i - 1];
+			names[i - 1] = names[spot];
+			names[spot] = tempName;
+		}
+		for (int i = 0; i < names.length; i++) {
+			System.out.println(names[i] + "'s GPA is " + nums[i]);
+		}
+		int query = Integer.parseInt(JOptionPane.showInputDialog("Which number do you want to find?"));
+		
+	}
+}

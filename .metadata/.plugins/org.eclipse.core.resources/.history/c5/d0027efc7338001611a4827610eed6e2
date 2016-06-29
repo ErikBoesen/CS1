@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class PersonalityQuiz {
+	public static void main(String[] args) {
+		System.out.println("Welcome to the personality quiz! Please answer all questions honesly, with \"yes\" or \"no\".\n");
+		
+		Scanner kb = new Scanner();
+		System.out.println("Does Hockey suck?");
+		String ans = kb.next();
+		
+		if (ans.equals("yes"))
+	}
+}

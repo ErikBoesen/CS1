@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class PersonalityQuiz {
+	public static void main(String[] args) {
+		System.out.println("Welcome to the personality quiz! Please answer all questions honesly, with 'yes' or 'no'.\nAlternate answers may be provided in 'single' 'quotes', like that.");
+		
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Does Hockey suck?");
+		String ans = kb.next();
+		
+		if (ans.equals("yes")) {
+			System.out.println("That's the right answer, good job.\nIs soccer the best sport?");
+			ans = kb.next();
+			
+			if (ans.equals("yes")) {
+				System.out.println("Correct. Do you enjoy spending time at George Mason?");
+				ans = kb.next();
+
+				if (ans.equals("yes")) {
+					System.out.println("Star 'wars' or Star 'trek'?");
+				} else if (ans.equals("no")) {
+					System.out.println("");
+				}
+			} else if (ans.equals("no")) {
+				System.out.println("Incorrect, moving on.\n'pie' or 'cookies'?");
+				ans = kb.next();
+
+				if (ans.equals("pie")) {
+					System.out.println("'cherry' or 'blueberry'?");
+				} else if (ans.equals("cookies")) {
+					System.out.println("Do you believe that Oatmeal Raisin cookies were sent to Earth by Satan?");
+				}
+			}
+		} else if (ans.equals("no")) {
+			System.out.println("Yes it does.\nAre blue or green your favorite color? (Still yes or no)");
+			ans = kb.next();
+			
+			if (ans.equals("yes")) {
+				System.out.println("Which do you like better, 'cake' or 'ice cream'?");
+				ans = kb.next();
+
+				if (ans.equals("cake")) {
+					System.out.println("");
+				} else if (ans.equals("ice")) {
+					System.out.println("");
+				}
+			} else if (ans.equals("no")) {
+				System.out.println("'marvel' or 'dc'?");
+				ans = kb.next();
+
+				if (ans.equals("yes")) {
+					System.out.println("");
+				} else if (ans.equals("no")) {
+					System.out.println("");
+				}
+			}
+		}
+	}
+}
+
+/*
+ans = kb.next();
+
+if (ans.equals("yes")) {
+	System.out.println("");
+} else if (ans.equals("no")) {
+	System.out.println("");
+}
+*/

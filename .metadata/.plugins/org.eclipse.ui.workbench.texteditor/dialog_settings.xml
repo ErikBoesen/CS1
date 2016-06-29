@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="ladderX[4]" key="selection"/>
+		<item value="nums" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="gpas"/>
 			<item value="ladder5X"/>
 			<item value="ladder4X"/>
 			<item value="ladder3X"/>
@@ -15,9 +16,9 @@
 			<item value="ladderX[1]"/>
 			<item value="ladder1X"/>
 			<item value="playerSpeedX"/>
-			<item value="playerSpeedY"/>
 		</list>
 		<list key="replacehistory">
+			<item value="nums"/>
 			<item value="ladderX[4]"/>
 			<item value="ladderX[3]"/>
 			<item value="ladderX[2]"/>
@@ -25,7 +26,6 @@
 			<item value="ladderX[0]"/>
 			<item value="player.speedX"/>
 			<item value="player.speedY"/>
-			<item value="player.y"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

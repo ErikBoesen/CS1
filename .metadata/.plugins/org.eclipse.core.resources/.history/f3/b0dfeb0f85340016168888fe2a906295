@@ -1,0 +1,73 @@
+import java.awt.GridLayout;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class PesterChumServer2 extends JFrame implements Runnable {
+	public static void main(String[] args) throws IOException {
+		// Thread th=new Thread();
+		// PesterChumServer2 serv=new PesterChumServer2();
+		new Thread(new PesterChumServer2()).start();
+		System.out.println("asdf");
+		// right now the endless loop is preventing client from instantiateing
+
+		PesterChumClient client = new PesterChumClient();
+		// JFrame is not neccesary, just for convenience
+
+	}
+
+	// listens for a server with the port and reads it out to the command line
+	JTextField outputfield = new JTextField(10);
+
+	PesterChumServer2() {
+
+		this.setVisible(true);
+		this.setSize(500, 500);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setTitle("Server");
+		GridLayout lay = new GridLayout(5, 5);
+		this.setLayout(lay);
+
+		outputfield = new JTextField(10);
+		outputfield.setText("asdf");
+		add(outputfield);
+		Thread.yield();
+	}
+
+	@Override
+	public void run() {
+
+		while (true) {
+			try {
+
+				int port = 55000;
+				ServerSocket serverSock = new ServerSocket(port);
+
+				Socket clientSock = serverSock.accept();
+
+				BufferedReader br = new BufferedReader(new InputStreamReader(
+						clientSock.getInputStream()));
+				String text = br.readLine();// remember that readLine erases the
+											// line
+				System.out
+						.println(text + " is successful, reading from server");
+				outputfield.setText(text
+						+ " is successful, reading from server");
+
+				br.close();
+				serverSock.close();
+				clientSock.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			// Thread.yield();//right now we can't execute this on the same
+			// computer without multithreading
+		}
+	}
+}

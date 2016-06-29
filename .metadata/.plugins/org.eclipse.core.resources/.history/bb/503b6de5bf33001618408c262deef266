@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+public class ClassOrganizer {
+	public static void main(String[] args) {
+		String[] names = new String[6];
+		for (int i =  0; i < names.length; i++) {
+			names[i] = JOptionPane.showInputDialog("What is your name?");
+		}
+		int[] gpas = new int[6];
+		for (int i = 0; i < gpas.length; i++) {
+			gpas[i] = JOptionPane.showInputDialog("What is " + names[i] + "'s GPA?");
+		}
+		for (int i = array.length - 1; i > 0; i--) {
+			// The highest number in the starting is always the first.
+			int highest = array[0];
+			int spot = 0;
+			// Cycle through all the unsorted numbers, to find the highest 
+			for (int j = 0; j < i; j++) {
+				// Is this number higher than the largest number so far?
+				if (array[j] > highest) {
+					// Then replace the current record with this number.
+					highest = array[j];
+					// ...and store which spot it's in for later.
+					spot = j;
+				}
+			}
+			// After the highest unsorted number has been found, switch the highest number with the last unsorted number.
+			int temp = array[i - 1] = highest;
+			array[spot] = temp;
+		}
+	}
+}
