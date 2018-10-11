@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy package &apos;sorter&apos; to &apos;QuarterTwo/src/(default package)&apos;&#x0A;- Original project: &apos;sort&apos;&#x0A;- Destination element: &apos;QuarterTwo/src/(default package)&apos;&#x0A;- Original element: &apos;sort/src/sorter&apos;" description="Copy package" destination="=QuarterTwo/src&lt;" element1="/src&lt;sorter" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1465906531105" version="1.0"/>
-</session>
